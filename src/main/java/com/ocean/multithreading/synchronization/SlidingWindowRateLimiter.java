@@ -1,4 +1,4 @@
-package com.ocean.leetcode.design;
+package com.ocean.multithreading.synchronization;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

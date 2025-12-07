@@ -1,4 +1,4 @@
-package com.ocean.leetcode.design;
+package com.ocean.multithreading.reentrantlock;
 
 import java.util.HashMap;
 import java.util.Map;

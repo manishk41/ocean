@@ -1,4 +1,4 @@
-package com.ocean.leetcode.design;
+package com.ocean.multithreading.atomic;
 
 import java.util.concurrent.atomic.AtomicLong;
 
