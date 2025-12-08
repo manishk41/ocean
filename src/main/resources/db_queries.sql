@@ -15,3 +15,6 @@ db=mysql
 db-username=keycloak
 db-password=password
 db-url=jdbc:mysql://localhost:3306/keycloak?characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
+
+
+mysql-> root/root@123
