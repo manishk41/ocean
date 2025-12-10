@@ -26,9 +26,7 @@ public class BrokenSingleton {
     public int getValue() {
         return value;
     }
-}
 
-class TestBrokenSingleton {
     public static void main(String[] args) throws Exception {
 
         Runnable task = () -> {
