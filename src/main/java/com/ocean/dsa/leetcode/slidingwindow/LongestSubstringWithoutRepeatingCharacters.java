@@ -1,11 +1,39 @@
 package com.ocean.dsa.leetcode.slidingwindow;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class LongestSubstringWithoutRepeatingCharacters {
 
+    /*
+     * Move right pointer one step at a time:
+     * a. If the character is not in the set, add it and update max length.
+     * b. If the character is already in the set,
+     *       remove characters from the left until the duplicate is removed.
+     * */
     // ---------- LeetCode 3: Longest Substring Without Repeating Characters ----------
     public int lengthOfLongestSubstring(String s) {
+        Set<Character> set = new HashSet<>();
+        int left = 0, maxLen = 0;
+
+        for (int right = 0; right < s.length(); right++) {
+            char c = s.charAt(right);
+
+            while (set.contains(c)) {
+                set.remove(s.charAt(left));
+                left++;
+            }
+
+            set.add(c);
+            maxLen = Math.max(maxLen, right - left + 1);
+        }
+
+        return maxLen;
+    }
+
+    // ---------- LeetCode 3: Longest Substring Without Repeating Characters ----------
+    public int lengthOfLongestSubstring2(String s) {
         if (s == null || s.length() == 0) return 0;
 
         int[] lastSeen = new int[256]; // ASCII
